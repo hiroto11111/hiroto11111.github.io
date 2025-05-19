@@ -1,34 +1,43 @@
-import React from "react";
-import { AppBar, Box, Toolbar, Typography, IconButton, Avatar, Link } from "@mui/material";
+"use client";
+import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
-const Header: React.FC = () => {
+export default function Header() {
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (headerRef.current) {
+      gsap.set(headerRef.current, { y: -80, opacity: 0 });
+    }
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (headerRef.current) {
+        gsap.to(headerRef.current, {
+          y: 0,
+          opacity: scrollY > 100 ? 1 : 0,
+          duration: 0.6,
+          ease: "power3.out",
+        });
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <AppBar position="static" color="primary" elevation={2}>
+    <AppBar ref={headerRef} position="fixed" color="primary" sx={{ top: 0, left: 0, right: 0, opacity: 0, transform: "translateY(-80px)", zIndex: 1200, transition: "opacity 0.6s" }}>
       <Toolbar>
-        {/* ロゴ */}
-        <IconButton edge="start" color="inherit" sx={{ mr: 2 }}>
-          <Avatar src="/kurumiicon.png" alt="Logo" />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          <Link href="#home" color="inherit" underline="none">
-            MyPortfolio
-          </Link>
-        </Typography>
-        {/* ナビゲーション */}
+        <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+          <img src="/kurumiicon.png" alt="Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
+        </Box>
         <Box sx={{ display: "flex", gap: 3 }}>
-          <Link href="#about" color="inherit" underline="hover">
-            About
-          </Link>
-          <Link href="#projects" color="inherit" underline="hover">
-            Projects
-          </Link>
-          <Link href="#contact" color="inherit" underline="hover">
-            Contact
-          </Link>
+          <Typography component="a" href="#about" color="inherit" sx={{ textDecoration: "none" }}>About</Typography>
+          <Typography component="a" href="#projects" color="inherit" sx={{ textDecoration: "none" }}>Projects</Typography>
+          <Typography component="a" href="#contact" color="inherit" sx={{ textDecoration: "none" }}>Contact</Typography>
         </Box>
       </Toolbar>
     </AppBar>
   );
-};
-
-export default Header;
+}
