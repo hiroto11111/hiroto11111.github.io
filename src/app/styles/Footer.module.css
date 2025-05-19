@@ -1,0 +1,29 @@
+.footer {
+  background: #2d3748;
+  color: #fff;
+  padding: 16px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.icon {
+  color: #a0aec0;
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+.icon:hover {
+  color: #fff;
+}
+.copyright {
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.875rem;
+  margin-top: 16px;
+}
