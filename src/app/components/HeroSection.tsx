@@ -37,7 +37,7 @@ export default function HeroSection() {
       ref={heroRef}
       id="hero"
       sx={{
-        height: "150vh",
+        height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -87,18 +87,20 @@ export default function HeroSection() {
         height: "100vh",
         pointerEvents: "none",
         zIndex: 1,
+
       }}>
         <Typography
           id="heroText"
           variant="h2"
           sx={{
             fontWeight: "bold",
-            color: "primary.main",
+            color: "#fff",
             pointerEvents: "auto",
             textShadow: "0 2px 16px #000, 0 0 8px #fff8",
+            fontFamily: "'Noto Serif JP', sans-serif"
           }}
         >
-          HIROTO's Portfolio
+          Welcome to my Portfolio
         </Typography>
       </Box>
     </Box>
