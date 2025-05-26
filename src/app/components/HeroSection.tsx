@@ -4,7 +4,6 @@ import { Typography, Box } from "@mui/material";
 import gsap from "gsap";
 
 export default function HeroSection() {
-  const heroRef = useRef<HTMLDivElement>(null);
   const [bgIndex, setBgIndex] = useState(0);
   const bgImages = ["/background3.jpg", "/hiroshima.jpg"];
 
@@ -15,36 +14,20 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (heroRef.current) {
-        gsap.to(heroRef.current, {
-          opacity: scrollY < 100 ? 1 : 0,
-          pointerEvents: scrollY < 100 ? "auto" : "none",
-          duration: 0.6,
-          ease: "power3.out",
-        });
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <Box
-      ref={heroRef}
       id="hero"
       sx={{
-        height: "100vh",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100vh", 
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         bgcolor: "background.default",
-        position: "relative",
-        zIndex: 1,
-        transition: "opacity 0.6s",
+        zIndex: 0, 
         overflow: "hidden",
       }}
     >
@@ -55,7 +38,7 @@ export default function HeroSection() {
           top: 0,
           left: 0,
           width: "100%",
-          height: "100vh",
+          height: "100%",
           zIndex: 0,
         }}
       >
@@ -75,7 +58,7 @@ export default function HeroSection() {
           }}
         />
       </Box>
-      {/* テキスト中央配置 */}
+      {/* テキストを中央に配置 */}
       <Box sx={{
         width: "100%",
         display: "flex",

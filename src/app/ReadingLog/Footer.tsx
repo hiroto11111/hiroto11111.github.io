@@ -11,16 +11,12 @@ export default function Footer() {
         py: 2,
         textAlign: "center",
         width: "100%",
-        mt: 0,
+        position: "fixed",
+        left: 0,
+        bottom: 0,
+        zIndex: 1300,
       }}
     >
-      {/* ナビゲーションリンク */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 4, mb: 3 }}>
-        <a href="#top" style={{ color: "#fff", textDecoration: "none" }}>Top</a>
-        <a href="#aboutme" style={{ color: "#fff", textDecoration: "none" }}>About</a>
-        <a href="#activities" style={{ color: "#fff", textDecoration: "none" }}>Activities</a>
-        <a href="#hobby" style={{ color: "#fff", textDecoration: "none" }}>Hobby</a>
-      </Box>
       <Box sx={{ display: "flex", justifyContent: "center", gap: 3, mb: 1 }}>
         <a
           href="https://github.com/hiroto11111"

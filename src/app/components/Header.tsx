@@ -1,5 +1,5 @@
 "use client";
-import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, IconButton } from "@mui/material";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
@@ -38,20 +38,26 @@ export default function Header() {
         transform: "translateY(-80px)",
         zIndex: 1200,
         transition: "opacity 0.6s",
-        backgroundColor: "rgba(255,255,255,0.5)", // さらに透けるように透明度を下げる
+        backgroundColor: "rgba(255,255,255,0.5)",
         boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-        backdropFilter: "blur(8px)", // 背景をぼかして透け感を強調
-        WebkitBackdropFilter: "blur(8px)", // Safari対応
+        backdropFilter: "blur(8px)",
+        WebkitBackdropFilter: "blur(8px)",
       }}
     >
       <Toolbar>
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
-          <img src="/kurumiicon.png" alt="Logo" style={{ width: 40, height: 40, marginRight: 12 }} />
+          <IconButton onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} sx={{ p: 0, mr: 1.5, cursor: "pointer" }}>
+            <img
+              src="/kurumiicon.png"
+              alt="Logo"
+              style={{ width: 40, height: 40 }}
+            />
+          </IconButton>
         </Box>
         <Box sx={{ display: "flex", gap: 3 }}>
           <Typography component="a" href="#aboutme" color="#000" sx={{ textDecoration: "none" }}>About</Typography>
-          <Typography component="a" href="#projects" color="#000" sx={{ textDecoration: "none" }}>Projects</Typography>
-          <Typography component="a" href="#contact" color="#000" sx={{ textDecoration: "none" }}>Contact</Typography>
+          <Typography component="a" href="#activities" color="#000" sx={{ textDecoration: "none" }}>Activities</Typography>
+          <Typography component="a" href="#hobby" color="#000" sx={{ textDecoration: "none" }}>Hobby</Typography>
         </Box>
       </Toolbar>
     </AppBar>
