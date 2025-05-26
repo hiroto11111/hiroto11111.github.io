@@ -129,6 +129,10 @@ export default function Hobby() {
       textAlign="center"
       bgcolor={"#fff"}
       sx={{
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        transform: "translateX(-50%)",
         color: "#000",
         paddingTop: "65px",
       }}

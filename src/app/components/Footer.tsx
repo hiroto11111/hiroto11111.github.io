@@ -6,11 +6,14 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        transform: "translateX(-50%)",
         bgcolor: "#778899",
         color: "#fff",
         py: 2,
         textAlign: "center",
-        width: "100%",
         mt: 0,
       }}
     >

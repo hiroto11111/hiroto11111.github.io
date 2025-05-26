@@ -5,7 +5,17 @@ import BookCard from "./BookCard";
 
 export default function Home() {
   return (
-    <div style={{ backgroundColor: "#fff" }}>
+    <Box
+      sx={{
+        width: "100vw",
+        minHeight: "100vh",
+        bgcolor: "#fff",
+        position: "relative",
+        left: "50%",
+        transform: "translateX(-50%)",
+        overflowX: "hidden",
+      }}
+    >
       <Header />
 
       <Box
@@ -51,6 +61,6 @@ export default function Home() {
       </Box>
 
       <Footer />
-    </div>
+    </Box>
   );
 }

@@ -12,6 +12,10 @@ export default function AboutMe() {
       paddingTop="60px"
       bgcolor={"#fff"}
       sx={{
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        transform: "translateX(-50%)",
         color: "#000",
       }}
     >

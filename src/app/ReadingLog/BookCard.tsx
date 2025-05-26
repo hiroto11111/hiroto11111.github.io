@@ -55,12 +55,11 @@ export default function BookCard({
             alignItems: "center",
           }}
         >
-          <img
+          <Image
             src={imageSrc}
             alt={imageAlt}
+            fill
             style={{
-              width: "100%",
-              height: "100%",
               borderRadius: 6,
               display: "block",
               objectFit: "cover",
@@ -158,9 +157,9 @@ export default function BookCard({
             <Image
               src={imageSrc}
               alt={imageAlt}
+              width={200}
+              height={280}
               style={{
-                width: 200,
-                height: 280,
                 objectFit: "cover",
                 borderRadius: 6,
                 marginBottom: 16,
