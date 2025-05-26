@@ -7,8 +7,8 @@ import MuiThemeProvider from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "K Portfolio Clone",
-  description: "Full animated clone of k-portfolio.k-web-production.com",
+  title: "nishihiro's portfolio",
+  description: "This is nishihiro's portfolio website.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
