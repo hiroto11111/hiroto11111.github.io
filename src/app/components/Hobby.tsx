@@ -1,5 +1,6 @@
 import { Box, Typography, Divider } from "@mui/material";
 import { useState } from "react";
+import Image from "next/image";
 
 function HobbyCard({
   imageSrc,
@@ -41,12 +42,12 @@ function HobbyCard({
           alignItems: "center",
         }}
       >
-        <img
+        <Image
           src={imageSrc}
           alt={imageAlt}
+          width={220}
+          height={170}
           style={{
-            width: 220,
-            height: 150,
             borderRadius: 6,
             display: "block",
             objectFit: "cover",

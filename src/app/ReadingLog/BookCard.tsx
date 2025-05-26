@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Box, Typography, Dialog, DialogContent, DialogTitle, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import Image from "next/image";
 
 type BookCardProps = {
   imageSrc: string;
@@ -154,7 +155,7 @@ export default function BookCard({
         </DialogTitle>
         <DialogContent dividers>
           <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 3}}>
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt}
               style={{

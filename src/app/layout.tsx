@@ -1,7 +1,7 @@
 import "@/globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { CssBaseline, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import MuiThemeProvider from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });

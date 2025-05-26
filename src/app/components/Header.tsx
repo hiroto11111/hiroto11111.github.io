@@ -2,6 +2,7 @@
 import { AppBar, Toolbar, Typography, Box, IconButton } from "@mui/material";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -47,10 +48,11 @@ export default function Header() {
       <Toolbar>
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
           <IconButton onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} sx={{ p: 0, mr: 1.5, cursor: "pointer" }}>
-            <img
+            <Image
               src="/kurumiicon.png"
               alt="Logo"
-              style={{ width: 40, height: 40 }}
+              width={40}
+              height={40}
             />
           </IconButton>
         </Box>

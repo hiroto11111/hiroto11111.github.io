@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Typography, Box } from "@mui/material";
-import gsap from "gsap";
+import Image from "next/image";
 
 export default function HeroSection() {
   const [bgIndex, setBgIndex] = useState(0);
@@ -12,7 +12,7 @@ export default function HeroSection() {
       setBgIndex((prev) => (prev + 1) % bgImages.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [bgImages.length]);
 
   return (
     <Box
@@ -42,12 +42,11 @@ export default function HeroSection() {
           zIndex: 0,
         }}
       >
-        <img
+        <Image
           src={bgImages[bgIndex]}
           alt="background"
+          fill
           style={{
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
             transition: "opacity 1s",
             position: "absolute",
