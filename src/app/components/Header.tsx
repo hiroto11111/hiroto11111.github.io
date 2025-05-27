@@ -60,6 +60,7 @@ export default function Header() {
           <Typography component="a" href="#aboutme" color="#000" sx={{ textDecoration: "none" }}>About</Typography>
           <Typography component="a" href="#activities" color="#000" sx={{ textDecoration: "none" }}>Activities</Typography>
           <Typography component="a" href="#hobby" color="#000" sx={{ textDecoration: "none" }}>Hobby</Typography>
+          <Typography component="a" href="#deliverables" color="#000" sx={{ textDecoration: "none" }}>Deliverables</Typography>
         </Box>
       </Toolbar>
     </AppBar>

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AboutMe from "@/components/AboutMe";
 import Activities from "@/components/Activities";
 import Hobby from "@/components/Hobby";
+import Deliverables from "@/components/Deliverables";
 import { Box } from "@mui/material";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <AboutMe />
         <Activities />
         <Hobby />
+        <Deliverables />
         <Footer />
       </Box>
     </div>
