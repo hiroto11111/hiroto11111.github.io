@@ -36,7 +36,7 @@ export default function Footer() {
           <FaInstagram />
         </a>
       </Box>
-      <Typography variant="body2">© 2025 MyPortfolio. All rights reserved.</Typography>
+      <Typography variant="body2">© 2025 Nishihiro's Portfolio</Typography>
     </Box>
   );
 }
