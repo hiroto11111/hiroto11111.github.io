@@ -4,13 +4,18 @@ import Link from "next/link";
 export default function UnderManufacture() {
   return (
     <Box
-      minHeight="100vh"
-      width="100vw"
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      bgcolor="#fff"
+      sx={{
+        minHeight: "100vh",
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        transform: "translateX(-50%)",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        bgcolor: "#fff",
+      }}
     >
       <Typography
         variant="h5"
