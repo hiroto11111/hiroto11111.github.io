@@ -43,7 +43,6 @@ export default function BookCard({
           mb: 2,
         }}
       >
-        {/* 画像 */}
         <Box
           sx={{
             width: "100%",
@@ -66,8 +65,6 @@ export default function BookCard({
             }}
           />
         </Box>
-
-        {/* タイトル */}
         <Typography
           sx={{
             fontFamily: "'Noto Serif JP', sans-serif",
@@ -81,8 +78,6 @@ export default function BookCard({
         >
           {title}
         </Typography>
-
-        {/* あらすじ */}
         <Typography
           sx={{
             fontFamily: "'Noto Sans JP', sans-serif",
@@ -96,8 +91,6 @@ export default function BookCard({
         >
           {summary}
         </Typography>
-
-        {/* VIEW MORE */}
         <Box
           component="button"
           type="button"
@@ -143,8 +136,6 @@ export default function BookCard({
           </Box>
         </Box>
       </Box>
-
-      {/* モーダルウィンドウ */}
       <Dialog open={open} onClose={() => setOpen(false)} maxWidth="md" fullWidth sx={{ "& .MuiDialog-paper": { maxHeight: 420 } }}>
         <DialogTitle sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           {title}

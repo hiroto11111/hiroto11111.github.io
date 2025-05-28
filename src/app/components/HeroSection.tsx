@@ -31,7 +31,6 @@ export default function HeroSection() {
         overflow: "hidden",
       }}
     >
-      {/* 背景画像 */}
       <Box
         sx={{
           position: "absolute",

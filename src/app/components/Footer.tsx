@@ -17,7 +17,6 @@ export default function Footer() {
         mt: 0,
       }}
     >
-      {/* ナビゲーションリンク */}
       <Box sx={{ display: "flex", justifyContent: "center", gap: 4, mb: 3 }}>
         <a href="#top" style={{ color: "#fff", textDecoration: "none" }}>Top</a>
         <a href="#aboutme" style={{ color: "#fff", textDecoration: "none" }}>About</a>

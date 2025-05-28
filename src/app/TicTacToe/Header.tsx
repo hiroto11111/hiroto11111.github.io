@@ -19,7 +19,6 @@ export default function Header() {
       }}
     >
       <Toolbar sx={{ px: 2 }}>
-        {/* 左詰め：ロゴ */}
         <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
           <IconButton sx={{ p: 0, mr: 1.5, cursor: "pointer" }}>
             <Image
@@ -30,7 +29,6 @@ export default function Header() {
             />
           </IconButton>
         </Box>
-        {/* 中央：タイトル */}
         <Box sx={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>
           <Typography
             component="a"
@@ -43,7 +41,6 @@ export default function Header() {
             三目並べ
           </Typography>
         </Box>
-        {/* 右詰め：ホームに戻る */}
         <Box sx={{ flex: 1, display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
           <Typography
             component="a"

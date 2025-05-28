@@ -32,7 +32,6 @@ function Dcord({
         mb: 2,
       }}
     >
-      {/* 画像 */}
       <Box
         sx={{
           width: "100%",
@@ -56,8 +55,6 @@ function Dcord({
           }}
         />
       </Box>
-
-      {/* タイトル */}
       <Typography
         sx={{
           fontFamily: "'Noto Serif JP', sans-serif",
@@ -85,8 +82,6 @@ function Dcord({
       >
         {explanation}
       </Typography>
-
-      {/* VIEW MORE */}
       <Box
         component="a"
         href={link}
@@ -133,7 +128,6 @@ function Dcord({
   );
 }
 
-// ...existing code...
 export default function Deliverables() {
   return (
     <Box

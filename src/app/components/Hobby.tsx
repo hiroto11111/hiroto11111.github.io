@@ -30,7 +30,6 @@ function HobbyCard({
         mb: 2,
       }}
     >
-      {/* 画像 */}
       <Box
         sx={{
           width: "100%",
@@ -54,8 +53,6 @@ function HobbyCard({
           }}
         />
       </Box>
-
-      {/* タイトル */}
       <Typography
         sx={{
           fontFamily: "'Noto Serif JP', sans-serif",
@@ -69,8 +66,6 @@ function HobbyCard({
       >
         {title}
       </Typography>
-
-      {/* VIEW MORE */}
       <Box
         component="a"
         href={link}
@@ -81,7 +76,7 @@ function HobbyCard({
           alignItems: "center",
           gap: 1,
           cursor: "pointer",
-          fontSize: 14, // 大きく
+          fontSize: 14,
           fontWeight: "bold",
           letterSpacing: "0.1em",
           color: "#222",
@@ -116,8 +111,6 @@ function HobbyCard({
     </Box>
   );
 }
-
-// ...existing code...
 export default function Hobby() {
   return (
     <Box
