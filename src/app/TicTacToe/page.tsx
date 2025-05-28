@@ -44,9 +44,9 @@ export default function TicTacToe() {
   function handleClick(i: number) {
     if (squares[i] || winner) return;
 
-    let nextSquares = squares.slice();
-    let newXHistory = [...xHistory];
-    let newOHistory = [...oHistory];
+    const nextSquares = squares.slice();
+    const newXHistory = [...xHistory];
+    const newOHistory = [...oHistory];
 
     if (xIsNext) {
       if (xHistory.length === 3) {
@@ -107,15 +107,15 @@ export default function TicTacToe() {
           <DialogContent dividers>
             <Typography sx={{ mb: 2 }}>
               <strong>目的：</strong>
-              3x3のマス盤面に、自分のマーク（"X"または"O"）を縦・横・斜めのいずれか一直線に3つ並べることを目指します。
+              3x3のマス盤面に、自分のマーク（&quot;X&quot;または&quot;O&quot;）を縦・横・斜めのいずれか一直線に3つ並べることを目指します。
             </Typography>
             <Typography sx={{ mb: 2 }}>
               <strong>手番：</strong>
-              プレイヤーは交互に空いているマスに自分のマークを1つ置きます。最初は"X"のプレイヤーから始まります。
+              プレイヤーは交互に空いているマスに自分のマークを1つ置きます。最初は&quot;X&quot;のプレイヤーから始まります。
             </Typography>
             <Typography sx={{ mb: 2 }}>
               <strong>持ち駒制限：</strong>
-              各プレイヤー（"X"と"O"）は、盤上に同時に置ける自分のマークが最大3つまでという制限があります。
+              各プレイヤー（&quot;X&quot;と&quot;O&quot;）は、盤上に同時に置ける自分のマークが最大3つまでという制限があります。
             </Typography>
             <Typography>
               <strong>消える駒：</strong>

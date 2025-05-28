@@ -1,4 +1,5 @@
 import { AppBar, Toolbar, Typography, Box, IconButton } from "@mui/material";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -21,10 +22,11 @@ export default function Header() {
         {/* 左詰め：ロゴ */}
         <Box sx={{ flex: 1, display: "flex", alignItems: "center" }}>
           <IconButton sx={{ p: 0, mr: 1.5, cursor: "pointer" }}>
-            <img
+            <Image
               src="/kurumiicon.png"
               alt="Logo"
-              style={{ width: 40, height: 40 }}
+              width={40}
+              height={40}
             />
           </IconButton>
         </Box>

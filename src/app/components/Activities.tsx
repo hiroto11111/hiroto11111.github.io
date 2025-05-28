@@ -1,5 +1,6 @@
 import { Box, Typography, Divider } from "@mui/material";
 import { useState } from "react";
+import Image from "next/image";
 
 
 export default function Activities() {
@@ -54,12 +55,12 @@ export default function Activities() {
       >
         {/* 画像とロゴ */}
         <Box sx={{ width: "100%", height: 200, mb: 2, position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}>
-          <img
+          <Image
             src="/kakuni.jpg"
             alt="8ban"
+            width={300}
+            height={200}
             style={{
-              width: 300,
-              height: 200,
               borderRadius: 4,
               display: "block",
             }}
