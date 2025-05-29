@@ -22,6 +22,7 @@ export default function Footer() {
         <a href="#aboutme" style={{ color: "#fff", textDecoration: "none" }}>About</a>
         <a href="#activities" style={{ color: "#fff", textDecoration: "none" }}>Activities</a>
         <a href="#hobby" style={{ color: "#fff", textDecoration: "none" }}>Hobby</a>
+        <a href="#deliverables" style={{ color: "#fff", textDecoration: "none" }}>Deliverables</a>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "center", gap: 3, mb: 1 }}>
         <a
