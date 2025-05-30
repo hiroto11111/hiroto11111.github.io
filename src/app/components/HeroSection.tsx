@@ -56,7 +56,6 @@ export default function HeroSection() {
           }}
         />
       </Box>
-      {/* テキストを中央に配置 */}
       <Box sx={{
         width: "100%",
         display: "flex",
